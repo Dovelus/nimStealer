@@ -28,17 +28,6 @@ proc expandvars(path: string): string =
   ExpandEnvironmentStrings(path, &buffer, MAX_PATH)
   result = $buffer
 
-# proc getSecretey(): string =
-#   try:
-#     let json = parseFile(expandvars(CHROME_PATH_LOCAL_STATE))
-#     var secret_key = json["os_crypt"]["encrypted_key"].getStr().decode().substr(5).cryptUnprotectData()
-
-#     return secret_key
-#   except Exception as e:
-#     echo e.msg
-#     echo "[ERR] Chrome secretkey cannot be found"
-#     return ""
-
 proc passwordDecrtypth(data: openarray[byte]): string =
 
   var key {.global.}: string
