@@ -1,1 +1,1 @@
-My firt interaction about trying to weponize NimLanguage
+My first interaction about trying to weponize NimLanguage
